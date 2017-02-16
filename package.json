@@ -1,30 +1,33 @@
 {
-  "name": "npm-registry-download",
-  "version": "1.0.6",
+  "name": "nrd",
+  "version": "1.0.0",
   "description": "Download directly from the npm registry without using npm",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/austinkelleher/npm-registry-download.git"
+    "url": "git+https://github.com/austinkelleher/nrd.git"
   },
   "keywords": [
     "npm",
     "registry",
     "download",
-    "tarball"
+    "tarball",
+    "nerd",
+    "nrd"
   ],
   "author": "Austin Kelleher, a@alk.im",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/austinkelleher/npm-registry-download/issues"
+    "url": "https://github.com/austinkelleher/nrd/issues"
   },
-  "homepage": "https://github.com/austinkelleher/npm-registry-download#readme",
+  "homepage": "https://github.com/austinkelleher/nrd#readme",
   "devDependencies": {
     "eslint-config-semistandard": "^7.0.0",
     "standard": "^8.6.0"
   },
   "dependencies": {
+    "argly": "^1.1.1",
     "superagent": "^3.4.1",
     "tar.gz2": "^1.0.0"
   }

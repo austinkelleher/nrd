@@ -37,7 +37,7 @@ function _resolveRegistryVersion (body, tag, version) {
   return version;
 }
 
-function registryDownload (packageName, options) {
+exports.download = (packageName, options) => {
   let {
     tag,
     version,
@@ -45,7 +45,7 @@ function registryDownload (packageName, options) {
     dir
   } = options || {};
 
-  untar = untar || true;
+  untar = typeof untar !== 'undefined' ? untar : true;
   dir = dir || process.cwd();
 
   return _fetchRegistryData(packageName)
@@ -83,6 +83,4 @@ function registryDownload (packageName, options) {
         stream.on('error', reject);
       });
     });
-}
-
-module.exports = registryDownload;
+};

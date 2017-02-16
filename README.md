@@ -1,11 +1,18 @@
-# npm-registry-download
+# nrd
 
-Download an [npm](https://www.npmjs.com/) registry package tar file directly
+Download an [npm](https://www.npmjs.com/) registry package tar file directly.
+`nrd` is short for **npm registry download**. It is also for `nerds`.
 
 ### Install
 
 ```bash
-npm install npm-registry-download --save
+npm install nrd --save
+```
+
+### Install Globally
+
+```bash
+npm install nrd -g
 ```
 
 ### Usage:
@@ -13,17 +20,17 @@ npm install npm-registry-download --save
 Download a package to the current directory and decompress the tar:
 
 ```js
-const registryDownload = require('npm-registry-download');
+const nrd = require('nrd');
 
-registryDownload('express');
+nrd.download('express');
 ```
 
 Download a package to a specific directory and decompress the tar:
 
 ```js
-const registryDownload = require('npm-registry-download');
+const nrd = require('nrd');
 
-registryDownload('express', {
+nrd.download('express', {
   dir: '/Users/me/Desktop'
 });
 ```
@@ -33,9 +40,9 @@ registryDownload('express', {
 Available options:
 
 ```js
-const registryDownload = require('npm-registry-download');
+const nrd = require('nrd');
 
-registryDownload('express', {
+nrd.download('express', {
   ...
 });
 ```
