@@ -1,6 +1,6 @@
 {
   "name": "nrd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Download directly from the npm registry without using npm",
   "main": "index.js",
   "scripts": {},
