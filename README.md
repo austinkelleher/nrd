@@ -1,7 +1,22 @@
 # nrd
 
 Download an [npm](https://www.npmjs.com/) registry package tar file directly.
-`nrd` is short for **npm registry download**. It is also for `nerds`.
+`nrd` is short for **npm registry download**. It is also for `nerds`. `nrd` is
+useful for easily inspecting source code of modules **and** creating project
+scaffolds. Instead of creating a repo that has a template folder inside of it
+and copying files over, a project can be versioned, and directly downloaded from
+npm into a project without dependency resolution issues. For example:
+
+```bash
+# Downloads my scaffold project from npm and renames it to `myapp`
+my-cli-using-nrd create myapp
+
+# Other examples
+marko create myapp
+create-react-app myapp
+ember new myapp
+ng new myapp
+```
 
 ### Install
 
