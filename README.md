@@ -83,7 +83,7 @@ nrd.download('express', {
 ### CLI
 
 `nrd` comes packaged with a **fantastic** command line utility. Trust me, I
-created it. Options for the CLI are the same as the options listed for the API.
+created it.
 
 Download a package to the current directory and decompress the tar:
 
@@ -95,4 +95,38 @@ Download a package to a specific directory and decompress the tar:
 
 ```bash
 nrd express --dir /Users/me/Desktop
+```
+
+### CLI Help / Options
+
+Running `nrd --help` will give you all of the information you need!
+
+```bash
+[master] $ nrd --help
+Usage: nrd [options]
+
+Examples:
+
+  Download an npm module to a specific directory:
+     nrd express --dir /Users/me/Desktop
+
+  Download a module from npm using a specific version:
+     nrd express --version 4.14.1
+
+  Download a module from npm using a specific tag:
+     nrd express --tag beta
+
+Options:
+
+       --help Show this help message [string]
+
+     --dir -d Directory to download the module into (defaults to current directory) [string]
+
+     --tag -t A version tag to download (defaults to latest) [string]
+
+ --version -v The version to download from npm [string]
+
+   --untar -u Whether the registry file should be untarred or not (defaults to true) [boolean]
+
+--module -m * npm module name [string]
 ```
