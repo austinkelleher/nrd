@@ -1,3 +1,5 @@
+'use strict';
+
 const nrd = require('../');
 
 let args = process.argv.slice(2);

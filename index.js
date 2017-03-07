@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs');
 const targz = require('tar.gz2');
 const path = require('path');
