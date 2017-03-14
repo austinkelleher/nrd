@@ -55,20 +55,17 @@ let options = require('argly').createParser({
 })
 .parse(args);
 
-const {
-  tag,
-  version,
-  untar,
-  dir
-} = options;
-
+let tag = options.tag;
+let version = options.version;
+let untar = options.untar;
+let dir = options.dir;
 const moduleName = options.module;
 
 nrd.download(moduleName, {
-  tag,
-  version,
-  untar,
-  dir
+  tag: tag,
+  version: version,
+  untar: untar,
+  dir: dir
 }).then(() => {
   console.log(`Successfully downloaded module "${moduleName}" to directory "${dir}"`);
 }).catch((err) => {

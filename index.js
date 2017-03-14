@@ -40,15 +40,14 @@ function _resolveRegistryVersion (body, tag, version) {
 }
 
 exports.download = (packageName, options) => {
-  let {
-    tag,
-    version,
-    untar,
-    dir
-  } = options || {};
+  options = options || {};
+
+  let tag = options.tag;
+  let version = options.version;
+  let untar = options.untar;
+  let dir = options.dir || process.cwd();
 
   untar = typeof untar !== 'undefined' ? untar : true;
-  dir = dir || process.cwd();
 
   return _fetchRegistryData(packageName)
     .then((res) => {
