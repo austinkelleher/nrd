@@ -79,6 +79,7 @@ nrd.download('express', {
 - version {String} - The version to download from npm
 - dir {String} - Directory to download the file to (default to current directory)
 - untar {Boolean} - Whether the registry file should be untarred or not (defaults to `true`)
+- registry {String} - Change the remote npm registry to use (defaults to https://registry.npm.org).
 
 ### CLI
 
@@ -118,15 +119,17 @@ Examples:
 
 Options:
 
-       --help Show this help message [string]
+  --help Show this help message [string]
 
-     --dir -d Directory to download the module into (defaults to current directory) [string]
+  --dir -d Directory to download the module into (defaults to current directory) [string]
 
-     --tag -t A version tag to download (defaults to latest) [string]
+  --tag -t A version tag to download (defaults to latest) [string]
 
- --version -v The version to download from npm [string]
+  --version -v The version to download from npm [string]
 
-   --untar -u Whether the registry file should be untarred or not (defaults to true) [boolean]
+  --untar -u Whether the registry file should be untarred or not (defaults to true) [boolean]
 
---module -m * npm module name [string]
+  --registry -r Change the remote npm registry to use (defaults to https://registry.npm.org) [string]
+
+  --module -m * npm module name [string]
 ```

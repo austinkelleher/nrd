@@ -1,16 +1,17 @@
 'use strict';
 
 const fs = require('fs');
+const url = require('url');
 const targz = require('tar.gz2');
 const path = require('path');
 const request = require('superagent');
 
-const BASE_REGISTRY_URL = 'https://registry.npmjs.org/';
+const DEFAULT_BASE_REGISTRY_URL = 'https://registry.npmjs.org';
 const DEFAULT_RESPONSE_TIMEOUT = 5000;
 const DEFAULT_DEADLINE_TIMEOUT = 10000;
 
-function _fetchRegistryData (packageName) {
-  const registryUrl = BASE_REGISTRY_URL + packageName;
+function _fetchRegistryData (packageName, baseUrl) {
+  const registryUrl = url.resolve(baseUrl, packageName);
   return request
     .get(registryUrl)
     .type('json')
@@ -46,10 +47,11 @@ exports.download = (packageName, options) => {
   let version = options.version;
   let untar = options.untar;
   let dir = options.dir || process.cwd();
+  let baseUrl = options.baseUrl || DEFAULT_BASE_REGISTRY_URL;
 
   untar = typeof untar !== 'undefined' ? untar : true;
 
-  return _fetchRegistryData(packageName)
+  return _fetchRegistryData(packageName, baseUrl)
     .then((res) => {
       return new Promise((resolve, reject) => {
         const body = res.body;

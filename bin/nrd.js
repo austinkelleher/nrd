@@ -27,6 +27,10 @@ let options = require('argly').createParser({
     description: 'Whether the registry file should be untarred or not (defaults to true)',
     defaultValue: true
   },
+  '--registry -r': {
+    type: 'string',
+    description: 'Change the remote npm registry to use (defaults to https://registry.npm.org)'
+  },
   '--module -m *': {
     type: 'string',
     description: 'npm module name'
