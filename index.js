@@ -47,7 +47,7 @@ exports.download = (packageName, options) => {
   let version = options.version;
   let untar = options.untar;
   let dir = options.dir || process.cwd();
-  let baseUrl = options.baseUrl || DEFAULT_BASE_REGISTRY_URL;
+  let baseUrl = options.registry || DEFAULT_BASE_REGISTRY_URL;
 
   untar = typeof untar !== 'undefined' ? untar : true;
 
