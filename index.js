@@ -11,7 +11,7 @@ const DEFAULT_RESPONSE_TIMEOUT = 5000;
 const DEFAULT_DEADLINE_TIMEOUT = 10000;
 
 function _fetchRegistryData (packageName, baseUrl) {
-  const registryUrl = url.resolve(baseUrl, packageName);
+  const registryUrl = url.resolve(baseUrl, encodeURIComponent(packageName));
   return request
     .get(registryUrl)
     .type('json')
